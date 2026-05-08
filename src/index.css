@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth; /* This makes the #links slide instead of jump */
+}
