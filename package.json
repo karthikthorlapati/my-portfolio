@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+  "@tailwindcss/postcss": "^4.0.0",
+  "tailwindcss": "^4.0.0",
+  "autoprefixer": "^10.4.0",
   "framer-motion": "latest",
   "lucide-react": "latest",
   "react": "^18.2.0",
