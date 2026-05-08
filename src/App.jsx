@@ -1,7 +1,17 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 // Change line 3 to use GitHub (H) and LinkedIn (I)
-import { GitHub, LinkedIn, Mail, ExternalLink, Code2, Database, Terminal, Cpu } from 'lucide-react';
+// This pulls the exports and renames them to what your code expects
+import { 
+  Github as GithubIcon, 
+  Linkedin as LinkedinIcon, 
+  Mail, 
+  ExternalLink, 
+  Code2, 
+  Database, 
+  Terminal, 
+  Cpu 
+} from 'lucide-react';
 
 // REUSABLE REVEAL ANIMATION
 const Reveal = ({ children }) => (
