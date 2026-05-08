@@ -4,10 +4,10 @@ import * as Icons from 'lucide-react';
 
 const Reveal = ({ children }) => (
   <motion.div
-    initial={{ opacity: 0, y: 20 }}
+    initial={{ opacity: 0, y: 40 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
-    transition={{ duration: 0.5 }}
+    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
   >
     {children}
   </motion.div>
@@ -15,149 +15,131 @@ const Reveal = ({ children }) => (
 
 export default function App() {
   return (
-    <div className="bg-[#050505] text-[#a0a0a0] min-h-screen font-sans selection:bg-[#64ffda] selection:text-[#050505]">
+    <div className="bg-[#000000] text-[#a0a0a0] min-h-screen font-sans selection:bg-[#64ffda] selection:text-[#000]">
       
-      {/* MINIMALIST NAV */}
-      <nav className="fixed top-0 w-full h-24 px-8 md:px-16 flex justify-between items-center z-50 mix-blend-difference">
-        <div className="text-white font-bold tracking-tighter text-2xl">KT</div>
-        <div className="hidden md:flex gap-12 text-[10px] uppercase tracking-[0.3em] font-medium text-white/60">
+      {/* MINIMALIST NAVIGATION */}
+      <nav className="fixed top-0 w-full h-24 px-8 md:px-20 flex justify-between items-center z-50">
+        <div className="text-white font-black tracking-tighter text-3xl">KT</div>
+        <div className="hidden md:flex gap-16 text-[10px] uppercase tracking-[0.4em] font-bold text-white/50">
           <a href="#about" className="hover:text-white transition-colors">Profile</a>
           <a href="#projects" className="hover:text-white transition-colors">Engineering</a>
           <a href="#contact" className="hover:text-white transition-colors">Connect</a>
         </div>
       </nav>
 
-      <main className="max-w-7xl mx-auto px-8 md:px-16">
+      <main className="max-w-7xl mx-auto px-8 md:px-20">
         
-        {/* HERO - SDE ARCHITECT FOCUS */}
-        <section className="h-screen flex flex-col justify-center border-b border-white/5">
+        {/* HERO SECTION - ARCHITECTURAL FOCUS */}
+        <section className="h-screen flex flex-col justify-center border-b border-white/10">
           <Reveal>
-            <h1 className="text-7xl md:text-[120px] font-bold text-white leading-[0.9] tracking-tighter mb-8">
-              Karthik <br/> Thorlapati.
+            <h1 className="text-[12vw] md:text-[10vw] font-black text-white leading-[0.85] tracking-tighter mb-12">
+              KARTHIK <br/> THORLAPATI
             </h1>
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-              <p className="max-w-xl text-lg md:text-xl leading-relaxed">
-                Software Development Engineer specializing in high-performance distributed systems. 
-                Engineering scalable AI architectures with a focus on sub-second latency and system reliability[cite: 8].
-              </p>
-              <div className="font-mono text-[10px] uppercase tracking-widest border-l border-[#64ffda] pl-4">
-                Available for SDE Roles <br/> Based in India [cite: 34]
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-12">
+              <div className="max-w-2xl">
+                <h2 className="text-[#64ffda] font-mono text-xs uppercase tracking-[0.5em] mb-4">SDE & Backend Architect</h2>
+                <p className="text-xl md:text-2xl text-white leading-relaxed">
+                  Engineering high-performance distributed systems with a focus on sub-second latency, 
+                  scalable AI integration, and fault-tolerant asynchronous pipelines.
+                </p>
+              </div>
+              <div className="font-mono text-[10px] uppercase tracking-[0.3em] border-l border-[#64ffda] pl-6 h-fit py-2">
+                Aditya University <br/> AI & ML Specialization
               </div>
             </div>
           </Reveal>
         </section>
 
-        {/* PROFILE SECTION WITH IMAGE */}
-        <section id="about" className="py-32 grid md:grid-cols-2 gap-24 items-center">
-          <div className="relative group overflow-hidden bg-[#111] rounded-sm aspect-[4/5]">
-            {/* Professional Portrait Integration */}
+        {/* PROFILE SECTION - PROFESSIONAL PORTRAIT */}
+        <section id="about" className="py-32 grid md:grid-cols-2 gap-32 items-start border-b border-white/10">
+          <div className="relative group overflow-hidden bg-[#111] aspect-[3/4]">
+            {/* Portrait Integration */}
             <img 
               src="/karthik.jpg" 
               alt="Karthik Thorlapati" 
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 ease-in-out scale-105 group-hover:scale-100"
+              className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
             />
           </div>
           <Reveal>
-            <h3 className="text-sm font-mono text-[#64ffda] uppercase tracking-[0.4em] mb-8">01. Profile</h3>
-            <p className="text-2xl text-white font-medium leading-snug mb-8">
-              Currently pursuing a B.Tech in AI & ML at **Aditya University**[cite: 31, 32]. 
-              Maintaining a **CGPA of 8.26/10.0** while contributing to high-performance open-source backends[cite: 28, 33].
+            <h3 className="text-[#64ffda] font-mono text-xs uppercase tracking-[0.5em] mb-12">01 — The Profile</h3>
+            <p className="text-3xl text-white font-medium leading-tight mb-12">
+              Developing scalable backends for a modern digital infrastructure.
             </p>
-            <div className="space-y-6 text-sm">
-              <p>Expertise in **Python (FastAPI, AsyncIO)** and the **MERN stack**[cite: 7, 10].</p>
-              <p>Completed 1,000+ hours of intensive full-stack development focusing on DSA and system design[cite: 29].</p>
+            <div className="space-y-8 text-lg">
+              <p>
+                Currently pursuing a B.Tech in Artificial Intelligence and Machine Learning at **Aditya University** with a **CGPA of 8.26**.
+              </p>
+              <p>
+                Specializing in **Python (Expert)** and the MERN stack. I have logged over 1,000+ hours in deep DSA training and system design.
+              </p>
+              <div className="grid grid-cols-2 gap-8 pt-8">
+                <div>
+                  <h4 className="text-white font-bold mb-4 uppercase text-xs tracking-widest">Core Tech</h4>
+                  <p className="text-sm opacity-60 font-mono">FastAPI, AsyncIO, Node.js, Express, React</p>
+                </div>
+                <div>
+                  <h4 className="text-white font-bold mb-4 uppercase text-xs tracking-widest">Infrastructure</h4>
+                  <p className="text-sm opacity-60 font-mono">Redis, Docker, MongoDB, PostgreSQL</p>
+                </div>
+              </div>
             </div>
           </Reveal>
         </section>
 
-        {/* CORE SKILLS - GRID ARCHITECTURE */}
-        <section className="py-32 border-t border-white/5">
-          <h3 className="text-sm font-mono text-[#64ffda] uppercase tracking-[0.4em] mb-16">02. Expertise</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-16 gap-x-8">
-            <div>
-              <h4 className="text-white font-bold mb-4">Backend</h4>
-              <ul className="text-xs space-y-2 font-mono uppercase opacity-60">
-                <li>FastAPI [cite: 11]</li><li>AsyncIO [cite: 11]</li><li>Node.js [cite: 11]</li><li>Express [cite: 11]</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white font-bold mb-4">Systems</h4>
-              <ul className="text-xs space-y-2 font-mono uppercase opacity-60">
-                <li>Redis [cite: 12]</li><li>Docker [cite: 12]</li><li>WebSockets [cite: 15]</li><li>Microservices [cite: 11]</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white font-bold mb-4">Databases</h4>
-              <ul className="text-xs space-y-2 font-mono uppercase opacity-60">
-                <li>PostgreSQL [cite: 12]</li><li>MongoDB [cite: 12]</li><li>SQL [cite: 10]</li><li>MySQL [cite: 12]</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white font-bold mb-4">Languages</h4>
-              <ul className="text-xs space-y-2 font-mono uppercase opacity-60">
-                <li>Python (Expert) [cite: 10]</li><li>JavaScript [cite: 10]</li><li>C / C++ [cite: 10]</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* ENGINEERING PROJECTS */}
-        <section id="projects" className="py-32 border-t border-white/5">
-          <h3 className="text-sm font-mono text-[#64ffda] uppercase tracking-[0.4em] mb-16">03. Systems</h3>
-          <div className="space-y-32">
-            
+        {/* ENGINEERING PROJECTS - VERTICAL LIST ARCHITECTURE */}
+        <section id="projects" className="py-32">
+          <h3 className="text-[#64ffda] font-mono text-xs uppercase tracking-[0.5em] mb-24">02 — Engineering</h3>
+          
+          <div className="divide-y divide-white/10">
             {/* PROJECT 1: RAG SYSTEM */}
             <Reveal>
-              <div className="grid md:grid-cols-2 gap-12 items-center group">
-                <div>
-                  <h4 className="text-4xl font-bold text-white mb-6 group-hover:text-[#64ffda] transition-colors">Real-Time Streaming RAG System</h4>
-                  <p className="leading-relaxed mb-8">
-                    Engineered a Retrieval-Augmented Generation (RAG) system utilizing **Groq LPU** for high-speed document querying[cite: 14, 17]. 
-                    Architected WebSocket-based streaming to deliver real-time AI responses, successfully optimizing user-perceived latency[cite: 18].
+              <div className="py-20 group grid md:grid-cols-12 gap-8 items-center">
+                <div className="md:col-span-1 text-white/20 font-black text-4xl group-hover:text-[#64ffda] transition-colors">01</div>
+                <div className="md:col-span-7">
+                  <h4 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tighter">Real-Time Streaming RAG System</h4>
+                  <p className="text-xl leading-relaxed opacity-60">
+                    High-speed Retrieval-Augmented Generation utilizing Groq LPU and WebSockets for real-time document querying with sub-second latency.
                   </p>
-                  <div className="flex gap-4 font-mono text-[10px] uppercase tracking-widest opacity-40">
-                    <span>Python</span><span>Redis</span><span>Docker</span><span>FastAPI</span>
-                  </div>
                 </div>
-                <div className="bg-[#111] p-12 rounded-sm border border-white/5 flex items-center justify-center">
-                  <Icons.Zap size={64} className="text-white/10 group-hover:text-[#64ffda]/40 transition-all duration-500" />
+                <div className="md:col-span-4 flex justify-end gap-4 font-mono text-[10px] uppercase tracking-widest opacity-40">
+                  <span>Python</span><span>FastAPI</span><span>Redis</span><span>Docker</span>
                 </div>
               </div>
             </Reveal>
 
-            {/* PROJECT 2: ASYNC TASK PROCESSOR */}
+            {/* PROJECT 2: ASYNC PROCESSOR */}
             <Reveal>
-              <div className="grid md:grid-cols-2 gap-12 items-center group">
-                <div className="md:order-2">
-                  <h4 className="text-4xl font-bold text-white mb-6 group-hover:text-[#64ffda] transition-colors">Async Task Execution Engine</h4>
-                  <p className="leading-relaxed mb-8">
-                    Developed a scalable, asynchronous task execution engine utilizing **Redis** as a message broker[cite: 21, 25]. 
-                    Leveraged **AsyncIO** event loops for fault-tolerant task distribution and priority scheduling[cite: 25].
+              <div className="py-20 group grid md:grid-cols-12 gap-8 items-center">
+                <div className="md:col-span-1 text-white/20 font-black text-4xl group-hover:text-[#64ffda] transition-colors">02</div>
+                <div className="md:col-span-7">
+                  <h4 className="text-5xl md:text-6xl font-bold text-white mb-6 tracking-tighter">Async Task Execution Engine</h4>
+                  <p className="text-xl leading-relaxed opacity-60">
+                    A fault-tolerant asynchronous execution engine utilizing Redis as a message broker for high-concurrency background job management.
                   </p>
-                  <div className="flex gap-4 font-mono text-[10px] uppercase tracking-widest opacity-40">
-                    <span>Python</span><span>AsyncIO</span><span>Redis</span><span>JSON-RPC</span>
-                  </div>
                 </div>
-                <div className="bg-[#111] p-12 rounded-sm border border-white/5 flex items-center justify-center md:order-1">
-                  <Icons.Layers size={64} className="text-white/10 group-hover:text-[#64ffda]/40 transition-all duration-500" />
+                <div className="md:col-span-4 flex justify-end gap-4 font-mono text-[10px] uppercase tracking-widest opacity-40">
+                  <span>Python</span><span>AsyncIO</span><span>Redis</span><span>JSON-RPC</span>
                 </div>
               </div>
             </Reveal>
-
           </div>
         </section>
 
-        {/* CONNECT */}
-        <section id="contact" className="py-40 text-center">
+        {/* CONNECT SECTION */}
+        <section id="contact" className="py-40 border-t border-white/10 text-center">
           <Reveal>
-            <h3 className="text-5xl md:text-8xl font-bold text-white mb-12 tracking-tighter">Get in touch.</h3>
-            <p className="mb-16 text-lg">Actively seeking SDE opportunities at innovative technology firms.</p>
-            <div className="flex justify-center gap-16 mb-24">
-              <a href="mailto:karthikthorlapati33@gmail.com" className="hover:text-white transition-colors"><Icons.Mail size={32}/></a>
-              <a href="https://github.com/karthikthorlapati" className="hover:text-white transition-colors"><Icons.Github size={32}/></a>
-              <a href="https://linkedin.com/in/karthikthorlapati" className="hover:text-white transition-colors"><Icons.Linkedin size={32}/></a>
+            <h3 className="text-7xl md:text-[9vw] font-black text-white mb-16 tracking-tighter uppercase">Get in touch.</h3>
+            <div className="flex flex-col md:flex-row justify-between items-center gap-12">
+              <p className="text-xl text-left max-w-sm">
+                Actively seeking SDE opportunities to build the next generation of high-performance systems.
+              </p>
+              <div className="flex gap-12">
+                <a href="mailto:karthikthorlapati33@gmail.com" className="text-white hover:text-[#64ffda] transition-colors"><Icons.Mail size={40}/></a>
+                <a href="https://github.com/karthikthorlapati" className="text-white hover:text-[#64ffda] transition-colors"><Icons.Github size={40}/></a>
+                <a href="https://linkedin.com/in/karthikthorlapati" className="text-white hover:text-[#64ffda] transition-colors"><Icons.Linkedin size={40}/></a>
+              </div>
             </div>
-            <footer className="font-mono text-[10px] uppercase tracking-[0.5em] opacity-20">
+            <footer className="mt-40 font-mono text-[10px] uppercase tracking-[0.6em] opacity-20">
               Karthik Thorlapati — Aditya University — 2026
             </footer>
           </Reveal>
