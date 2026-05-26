@@ -44,7 +44,7 @@ export default function Education() {
                   opacity: 0.6,
                 }}
               >
-                2022 – 2026
+                2023 - 2027
               </span>
             </div>
 

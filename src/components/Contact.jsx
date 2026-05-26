@@ -79,7 +79,7 @@ export default function Contact() {
               gap: 6,
             }}
           >
-            Karthik Thorlapati — 2026
+            Karthik Thorlapati — 2027
           </span>
           <span
             style={{
