@@ -343,3 +343,48 @@
 .mobile-nav-link:hover {
   color: #64ffda;
 }
+
+/* ============================================
+   RESPONSIVE MEDIA QUERIES (Screen widths)
+   ============================================ */
+/* Mobile Screen Widths (< 768px) */
+@media (max-width: 767px) {
+  .nav-glass {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .stat-card {
+    padding: 16px 8px;
+  }
+}
+
+/* Tablet Screen Widths (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .project-card {
+    padding: 28px;
+  }
+}
+
+/* Desktop Screen Widths (> 1024px) */
+@media (min-width: 1025px) {
+  .nav-link {
+    font-size: 12px;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY: REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-delay: 0s !important;
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+  }
+  #particle-canvas {
+    display: none !important;
+  }
+}
+
