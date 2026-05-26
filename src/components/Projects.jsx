@@ -20,10 +20,10 @@ const PROJECTS = [
   },
   {
     num: '03',
-    title: 'Distributed KV Consensus Store',
-    desc: 'Highly consistent, fault-tolerant key-value store implementing Raft consensus protocol. Designed for high availability with active-passive replication, log compaction, and leader election handling.',
-    tags: ['Go', 'Raft', 'gRPC', 'Protobuf', 'Docker'],
-    github: 'https://github.com/karthikthorlapati/my-portfolio',
+    title: 'Fine-Tuned BERT Sentiment Classifier',
+    desc: 'Deep learning pipeline utilizing a custom fine-tuned BERT architecture for sub-second sentiment prediction on streaming text. Implements sequence classification with multi-class inference, deployed via high-performance FastAPI gateways.',
+    tags: ['Python', 'PyTorch', 'Transformers', 'FastAPI', 'BERT', 'Docker'],
+    github: 'https://github.com/karthikthorlapati/sentiment-bert-project',
   },
 ];
 
