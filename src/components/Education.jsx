@@ -1,4 +1,3 @@
-import React from 'react';
 import Reveal from './Reveal';
 import { GraduationCap, Award } from 'lucide-react';
 

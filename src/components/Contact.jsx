@@ -1,6 +1,5 @@
-import React from 'react';
 import Reveal from './Reveal';
-import { Mail, Linkedin, Github, MapPin, Heart } from 'lucide-react';
+import { Mail, Linkedin, Github, MapPin } from 'lucide-react';
 
 export default function Contact() {
   return (

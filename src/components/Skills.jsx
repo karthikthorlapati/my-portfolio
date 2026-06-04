@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import Reveal from './Reveal';
 import { Code, Cpu, Database, Brain } from 'lucide-react';
